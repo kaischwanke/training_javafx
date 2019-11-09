@@ -18,7 +18,7 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="submit" mnemonicParsing="false" onAction="#calculate" text="Add" GridPane.rowIndex="2" />
+            <Button fx:id="submit" mnemonicParsing="false" onAction="#add" text="Add" GridPane.rowIndex="2" />
              <TextField fx:id="inputOne" />
              <TextField fx:id="inputTwo" prefHeight="27.0" prefWidth="72.0" GridPane.rowIndex="1" />
             <TextField fx:id="output" disable="true" GridPane.rowIndex="3" />

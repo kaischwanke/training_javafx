@@ -1,5 +1,6 @@
 package sample;
 
+import com.google.common.primitives.Ints;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 
@@ -24,14 +25,16 @@ public class Controller {
     }
 
     @FXML
-    private void calculate()
+    private void add()
     {
-        int sum = Integer.parseInt(inputOne.getText()) + Integer.parseInt(inputTwo.getText());
+        int sum = getValueAsNumber(inputOne) + getValueAsNumber(inputTwo);
         output.setText(String.valueOf(sum));
     }
 
-
-
+    private int getValueAsNumber(TextField inputOne) {
+        Integer valueAsInt = Ints.tryParse(inputOne.getText());
+        return valueAsInt == null ? 0 : valueAsInt;
+    }
 
 
 }
